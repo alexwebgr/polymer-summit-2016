@@ -1,0 +1,48 @@
+.reveal .speaker-notes {
+    max-height: inherit;
+    height: 80%;
+    width: 90%;
+    font-size: 19pt;
+    left: 5%;
+    opacity: 1;
+    background: #000000;
+}
+
+/*
+.logo {
+    position: absolute;
+    bottom: 20px;
+    right: 0px;
+    opacity: .7;
+}
+
+.reveal .controls {
+    left: 10px;
+}
+
+*/
+.reveal pre {
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    margin: 0 auto;
+}
+
+.reveal pre code{
+    padding: 0 10px;
+    max-height: 570px;
+}
+
+.reveal p {
+    margin: 0;
+}
+
+.reveal h1 {
+    font-size: 2.5em;
+}
+
+.reveal h2 {
+    font-size: 2em;
+}
+
+.reveal a {
+    font-weight: bold;
+}

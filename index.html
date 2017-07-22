@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Polymer Summit 2016</title>
+
+    <meta name="description" content="A presentation from Polymer Summit">
+    <meta name="author" content="Alex">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/blood.css" id="theme">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+</head>
+
+<body>
+
+<div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+        <section>
+            <div>
+                <img src="images/polymer_16_logo.png" alt="" width="300" />
+
+            </div>
+            <h2>Polymer Summit 2016</h2>
+            <strong>
+                A conference about Polymer <br />
+                a web framework developed by Google <br />
+                on top of Web Components
+            </strong>
+            <aside class="notes">
+                Thank you all for coming. Last month i had the opportunity to attend the Polymer summit, a conference about
+                a web framework developed by google on top of web components.
+                But before we dive in the specifics of the framework let's have a look at the building blocks of the web.
+            </aside>
+        </section>
+
+        <section>
+            <h1>Building blocks</h1>
+            <pre>
+                <code>
+<div>
+    Some content >>> HTMLDivElement
+</div>
+                </code>
+                <code>
+<a href="">
+    link text >>> HTMLAnchorElement
+</a>
+                </code>
+            </pre>
+            <aside class="notes">
+                So when you go into your favorite editor or IDE and type div what is happening behind the scenes is that you
+                are actually instantiating a class called HTMLDivElement and the same goes for any other tag<br /><br />
+                What if you could create your own classes and your own tags and link them together?<br /><br />
+                that's how web components were born !
+            </aside>
+        </section>
+
+        <section>
+            <h1>Web Components</h1>
+            <aside class="notes">
+                You can think of Web Components as reusable interface widgets that are created using open Web technologies.<br /><br />
+                They are rendered directly from the browser, and so there is no need for loading external libraries like jQuery.<br /><br />
+                An existing Web Component can be used without writing code, simply by adding an import statement to an HTML page.
+            </aside>
+        </section>
+
+        <section>
+            <h1>Web Components</h1>
+            <ul>
+                <li>Custom Elements</li>
+                <li>HTML Templates</li>
+                <li>Shadow DOM</li>
+                <li>HTML Imports</li>
+            </ul>
+            <aside class="notes">
+                They consist of several technologies four of the main ones are.<br /><br />
+            </aside>
+        </section>
+
+        <section>
+            <h1>Custom Elements</h1>
+            <aside class="notes">
+                With Custom Elements, web developers can create new HTML tags, beef-up existing HTML tags,
+                or extend the components other developers have authored. This API is the foundation of web components.
+                It brings a web standards-based way to create reusable components using nothing more than vanilla JS/HTML/CSS.
+            </aside>
+        </section>
+
+        <section>
+            <h1>HTML Templates</h1>
+            <aside class="notes">
+                HTML Templates elements are used to declare fragments of HTML that can be cloned and inserted in the document by script.
+            </aside>
+        </section>
+
+        <section>
+            <h1>Shadow DOM</h1>
+            <aside class="notes">
+                Is a method of combining multiple DOM trees into one hierarchy and how these trees interact with each other within a document,
+                thus enabling better composition of the DOM.
+            </aside>
+        </section>
+
+        <section>
+            <h1>HTML Imports</h1>
+            <aside class="notes">
+                HTML Imports is a way to include and reuse HTML documents in other HTML documents.
+            </aside>
+        </section>
+
+        <section>
+            <h2>Browser Support</h2>
+            <img src="images/webComponents.png" width="700" alt="" />
+            <aside class="notes">
+                Can i use Web Components ? <br />
+                Unfortunately and like all web technologies it takes a while until they become standards.
+                <br /><br />
+                Despair not there is a framework for that !!!
+            </aside>
+        </section>
+
+        <section>
+            <h1>Polymer</h1>
+            <aside class="notes">
+                Polymer is a framework officially developed by Google which adds an abstraction layer on top of Web Components
+                in order to achieve cross-browser compatibility. <br /><br />
+                it also adds some syntactic sugar so developers can take full advantage of web components<br /><br />
+                It is currently on version 1.7 and it comes with a full toolbox and a growing element catalog.<br /><br />
+                The next major release 2.0 is still in the works and is coming some time next year.
+            </aside>
+        </section>
+
+        <section>
+            <h1>Polymer 2.0</h1>
+                <ul>
+                    <li>Web components 1.0</li>
+                    <li>ES 6</li>
+                    <li>Removes custom abstractions</li>
+                    <li>Upgrader</li>
+                    <li>Hybrid mode</li>
+                </ul>
+            <aside class="notes">
+                It is going to support web components 1.0, <br /><br />developers will be able to write vanilla javascript using ES 6 syntax,<br /><br />
+                it will remove several of polymer abstractions so developers will be able to work closer to the metal and create custom elements
+                that will be indistinguishable from native custom elements and <br /><br />
+                finally it will make it easier to upgrade existing elements by offering tools like the upgrader and the hybrid mode.
+            </aside>
+        </section>
+
+        <section>
+            <h1>Toolbox</h1>
+            <ul>
+                <li>Polymer CLI</li>
+                <li>Lighthouse</li>
+                <li>Linter</li>
+            </ul>
+            <aside class="notes">
+                polymer CLI is a set of tools that handle operations like generating the app skeleton and
+                starting and stopping the web server and preparing the app for production<br /><br />
+                Lighthouse is a tool for improving the quality of your web apps. You can run it as a Chrome Extension or from the command line.
+                it runs a barrage of tests against the page, and then it generates a report on how well the page did.
+                From here you can use the failing tests as indicators on what you can do to improve your app.<br /><br />
+                and a Linter that checks for spelling errors or malformed syntax
+            </aside>
+        </section>
+
+        <section>
+            <h2>Installation</h2>
+            <pre>
+                <code>
+<!-- Install the Polymer CLI -->
+npm install -g polymer-cli
+                </code>
+                <code>
+<!-- Initialize your project -->
+ mkdir my-awesome-app
+ cd my-awesome-app
+                </code>
+                <code>
+polymer init
+                </code>
+                <code>
+<!-- Serve your app at http://localhost:8080 -->
+polymer serve --open
+                </code>
+            </pre>
+        </section>
+        <section>
+            <h2>Add a new element</h2>
+            <pre>
+                <code>
+<!-- Install via bower -->
+bower install --save PolymerElements/icon-toggle-demo
+                </code>
+            </pre>
+            <pre>
+                <code>
+<!-- Import using HTML imports -->
+<link rel="import" href="icon-toggle-demo.html">
+                </code>
+            </pre>
+            <pre>
+                <code>
+<!-- Use where needed -->
+<icon-toggle-demo></icon-toggle-demo>
+                </code>
+            </pre>
+        </section>
+
+        <section>
+            <h2>Inside a Polymer Element</h2>
+            <pre>
+                <code>
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-icon/iron-icon.html">
+
+<dom-module id="icon-toggle">
+  <template>
+    <style> </style>
+  </template>
+  <script> </script>
+</dom-module>
+          </code>
+            </pre>
+        </section>
+
+        <section>
+            <pre>
+                <code>
+<template>
+    <style>
+          :host {
+              display: inline-block;
+          }
+          iron-icon {
+              fill: var(--icon-toggle-color, rgba(0,0,0,0));
+              stroke: var(--icon-toggle-outline-color, currentcolor);
+          }
+          :host([pressed]) iron-icon {
+              fill: var(--icon-toggle-pressed-color, currentcolor);
+          }
+    </style>
+      <!-- local DOM goes here -->
+    <iron-icon icon="[[toggleIcon]]">
+    </iron-icon>
+</template>
+                </code>
+            </pre>
+        </section>
+<script>
+    var Polymer = function () {
+
+    };
+</script>
+        <section>
+            <pre>
+                <code>
+  <script>
+  Polymer({
+      is: 'icon-toggle',
+      properties: {
+          pressed: {
+              type: Boolean,
+              notify: true,
+              reflectToAttribute: true,
+              value: false
+          },
+          toggleIcon: {
+              type: String
+          }
+      },
+      listeners: {
+          "tap": "toggle"
+      },
+      toggle: function() {
+          this.pressed = !this.pressed;
+      }
+  });
+  </script>
+                </code>
+            </pre>
+        </section>
+
+        <section>
+            <h2>Custom Element Catalogs</h2>
+        </section>
+
+        <section>
+            <h2>Polymer Catalog</h2>
+            <img src="images/polymerCatalog.png" alt="" width="700" />
+            <div>
+                <a href="https://elements.polymer-project.org/">https://elements.polymer-project.org/</a>
+            </div>
+            <aside class="notes">
+                the official Polymer catalog maintained by Google<br /><br />
+            </aside>
+        </section>
+
+        <section>
+            <h2>Web Components.org</h2>
+            <img src="images/webComponentsElements.png" alt="" width="700" />
+            <div>
+                <a href="https://beta.webcomponents.org/">https://beta.webcomponents.org/</a>
+            </div>
+            <aside class="notes">
+                WebComponents.org a public element catalog where anyone can submit their custom elements<br /><br />
+            </aside>
+        </section>
+
+        <section>
+            <h2>Custom Elements.io</h2>
+            <img src="images/customElements.png" alt="" width="700" />
+            <div>
+                <a href="https://customelements.io/">https://customelements.io/</a>
+            </div>
+            <aside class="notes">
+                Other websites like customelements.io or vaadin.com that publish custom elements.<br /><br />
+            </aside>
+        </section>
+
+        <section>
+            <h2>Vaadin Elements</h2>
+            <img src="images/vaadinElements.png" alt="" width="700" />
+            <div>
+                <a href="https://vaadin.com/elements">https://vaadin.com/elements</a>
+            </div>
+            <aside class="notes">
+                In theory elements from different catalogs can be used together but that is mostly up to creator of the element.
+            </aside>
+        </section>
+
+        <section>
+            <h2>Types of Custom Elements</h2>
+            <ul>
+                <li>Visual</li>
+                <li>Non visual</li>
+                <li>Wrapper for third-party APIs</li>
+            </ul>
+            <aside class="notes">
+                Custom elements may be Visual like input fields, buttons, tables and charts<br /><br />
+                Non visual elements that perform background tasks like authentication, handling push notifications or routing.<br /><br />
+                Elements that act as wrappers for third-party APIs like google analytics or the Twitter API<br />
+            </aside>
+        </section>
+
+        <section>
+            <h2>Companies that use Polymer</h2>
+            <div>
+                <img src="images/whoIsUsingPolymer.png" width="800" alt="" />
+            </div>
+            <aside class="notes">
+                Amongst the companies that use polymer are ING group bank, Usa today, Comcast, net a porter, BBVA, coca cola
+                and of course Google who is planning to mvoe all their applications and websites to use Polymer
+            </aside>
+        </section>
+
+        <section>
+            <h1>Main takeaways</h1>
+            <ul>
+                <li>PRPL pattern</li>
+                <li>Progressive Web Apps</li>
+                <li>#useThePlatform</li>
+                <li>Be Lazy Do Less</li>
+            </ul>
+        </section>
+
+        <section>
+            <h1>PRPL pattern</h1>
+            <ul>
+                <li><strong>Push</strong> critical resources for the initial route.</li>
+                <li><strong>Render</strong> initial route asap.</li>
+                <li><strong>Pre-cache</strong> remaining components.</li>
+                <li><strong>Lazy-load</strong> and create remaining routes on demand.</li>
+            </ul>
+            <div>
+                <a href="https://developers.google.com/web/fundamentals/performance/prpl-pattern/">https://goo.gl/AnSZGo</a>
+            </div>
+        </section>
+
+        <section>
+            <h1>P.W.A.</h1>
+            <p>Progressive Web Apps</p>
+            <ul>
+                <li>Fast</li>
+                <li>Reliable</li>
+                <li>Engaging</li>
+            </ul>
+            <aside class="notes">
+                Progressive Web Apps is un umbrella term for several web technologies that can be used to transform traditional websites
+                into modern web apps with features that are usually found in native mobile apps like working offline, handling push notifications, being installable
+                and discoverable and able to break free from the barriers of the browser.
+                These apps aren’t packaged and deployed through app stores but they’re just websites that took all the right vitamins.
+                So they are always up to date and thanks to the ask when you need it permission model of the web
+                the user doesnt have to make a heavyweight decision upfornt and unwillingly agree to surrender their privacy by allowing the app to access
+                the camera, microphone or location without their knowledge.
+            </aside>
+        </section>
+
+        <section>
+            <h1>P.W.A.</h1>
+            <p>Progressive Web Apps - checklist</p>
+            <ul>
+                <li>Website is served over HTTPS</li>
+                <li>Website works cross-browser</li>
+                <li>Pages each have a unique URL</li>
+                <li>Pages have responsive layouts that render nicely in all devices</li>
+                <li>The start URL loads while offline</li>
+                <li>Metadata is provided for an "Add to Home screen" icon</li>
+            </ul>
+            <a href="https://developers.google.com/web/progressive-web-apps/checklist">https://goo.gl/Pv1zy4</a>
+            <aside class="notes">
+                In order for an application to be considered a PWA it must conform to a list of rules that includes
+            </aside>
+        </section>
+
+        <section>
+            <h1>#useThePlatform</h1>
+            <div>
+                <img src="images/installing.png" alt="" />
+            </div>
+            <a href="http://xkcd.com/1367/">http://xkcd.com/1367/</a>
+            <aside class="notes">
+                <ul>
+                    <li>Let the browser do the hard work</li>
+                    <li>Take advantage of the Web Standards and APIs</li>
+                    <li>Assemblers first, craftsmen later</li>
+                </ul>
+            </aside>
+        </section>
+
+        <section>
+            <h1>Be Lazy Do Less</h1>
+            <aside class="notes">
+                Load less elements by using web components<br /><br />
+                using service workers for offline support<br /><br />
+                load only what is needed as the user interacts with the app
+            </aside>
+        </section>
+
+        <section>
+            <h1>Highlights</h1>
+            <ul>
+                <li>The Way of the Web - ING</li>
+                <li>Polymer Butter and Firebase Jelly</li>
+                <li>Production-Ready Polymer Elements</li>
+                <li>Adapting to the Mobile Web F̶u̶t̶u̶r̶e̶ Present</li>
+            </ul>
+            <div>
+                <a href="https://goo.gl/nJeLPK">Youtube Polymer Summit channel - https://goo.gl/nJeLPK</a>
+            </div>
+            <aside class="notes">
+                Some of the talks i found to be the most interesting
+            </aside>
+        </section>
+
+        <section>
+            <h2>The Way of the Web - ING</h2>
+        </section>
+
+        <section>
+            <h2>RDD</h2>
+            <aside class="notes">
+                sometimes developers practise Resume Drive Development. they go to company create a monolithic monstrous application
+                then they just leave for another company.
+            </aside>
+        </section>
+
+        <section>
+            <h2>Conway's law</h2>
+            <aside class="notes">
+                It states that
+                organizations which design systems ... are constrained to produce designs which are copies
+                of the communication structures of these organizations
+            </aside>
+        </section>
+
+        <section>
+            <h1>ING Metrics</h1>
+        </section>
+
+        <section>
+            <div>
+                <img src="images/ingMetrics_1.png" alt="" width="700" />
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <img src="images/ingMetrics_2.png" alt="" width="700" />
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <img src="images/ingMetrics_3.png" alt="" width="700" />
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <img src="images/ingMetrics_4.png" alt="" width="700" />
+            </div>
+        </section>
+
+        <section>
+            <h2>Polymer Butter and<br /> Firebase Jelly</h2>
+        </section>
+
+        <section>
+            <h2>Firebase</h2>
+            <div>
+                <img src="images/firebase.png" width="700" alt="" />
+            </div>
+            <aside class="notes">
+                Cloud Messaging - Deliver and receive messages across platforms reliably <br /> <br />
+                Authentication - Reduce friction with robust authentication<br /> <br />
+                Realtime Database - Store and sync app data in realtime<br /> <br />
+                Storage - Store files with ease<br /> <br />
+                Hosting - Deliver web content faster<br /> <br />
+                Also if you want to implement the PRPL pattern firebase is the place start
+            </aside>
+        </section>
+
+        <section>
+            <h2>Polymer Fire</h2>
+            <div>
+                <img src="images/polymerFire.png" alt="" width="700" />
+            </div>
+            <aside class="notes">
+                Custom elements for firebase
+            </aside>
+        </section>
+
+        <section>
+            <h2>Production-Ready Polymer Elements</h2>
+            <ul>
+                <li>Have great documentation</li>
+                <li>Have a demo page</li>
+                <li>Each element has each own repository</li>
+                <li>Thoroughly tested</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Have great documentation</h2>
+            <div>
+                <img src="images/productionReadyDocs.png" alt="" width="700" />
+            </div>
+        </section>
+
+        <section>
+            <h2>Have a demo page</h2>
+            <div>
+                <img src="images/productionReadyDemo.png" alt="" width="700" />
+            </div>
+        </section>
+
+        <section>
+            <h3>Each element has each own repository</h3>
+            <div>
+                <img src="images/productionReadySource.png" alt="" width="700" />
+            </div>
+        </section>
+
+        <section>
+            <h2>Thoroughly tested</h2>
+            <ul>
+                <li>Linting
+                    <ul>
+                        <li>ESLint</li>
+                        <li>PolyLint</li>
+                    </ul>
+                </li>
+                <li>Unit tests
+                    <ul>
+                        <li>Web Component Tester (WCT)</li>
+                    </ul>
+                </li>
+                <li>Continuous Integration
+                    <ul>
+                        <li>Travis</li>
+                    </ul>
+                </li>
+            </ul>
+            <aside class="notes">
+                those are the tools that the polymer is using to make their elements production ready
+            </aside>
+        </section>
+
+        <section>
+            <h2>Adapting to the Mobile Web F̶u̶t̶u̶r̶e̶ Present</h2>
+            <aside class="notes">
+                or how to make your app faster on a mobile device
+            </aside>
+        </section>
+
+        <section>
+            <div>
+                <img src="images/mobile1693.png" alt="" width="700" />
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <img src="images/mobile1928.png" alt="" width="700" />
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <img src="images/mobile15.png" alt="" width="700" />
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <img src="images/mobileMagic.png" alt="" width="700" />
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <img src="images/mobileScience.png" alt="" width="700" />
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <img src="images/mobileWastedTime.png" alt="" width="700" />
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <img src="images/mobileTarget.png" alt="" width="700" />
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <img src="images/mobileFightBack.png" alt="" width="700" />
+            </div>
+        </section>
+
+        <section>
+            <h1>CodeLabs</h1>
+            <a href="https://codelabs.developers.google.com/polymer-summit-2016">Polymer Tutorials - https://goo.gl/KjovNr</a>
+            <aside class="notes">
+                Check out codelabs, follow through any of the tutorials and build something cool
+            </aside>
+        </section>
+
+        <section>
+            <h1>Thank you </h1>
+            <p>Questions</p>
+        </section>
+    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+
+    var agent = navigator.userAgent;
+    var showNotes = false;
+
+    // quick hack to display notes on my fire tablet
+    if (agent.indexOf('Silk') > -1) {
+        showNotes = true;
+    }
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        width: 1200,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        showNotes: showNotes,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+            {
+                src: 'lib/js/classList.js', condition: function () {
+                    return !document.body.classList;
+                }
+            },
+            {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                    hljs.initHighlightingOnLoad();
+                }
+            },
+            {
+                src: 'plugin/notes/notes.js', async: true
+            }
+        ]
+    });
+
+</script>
+<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+<script>
+    var socket = io();
+
+    Reveal.addEventListener( 'slidechanged', function( event ) {
+        socket.emit('slideChange', Reveal.getState());
+    } );
+
+    socket.on('slideChange', function(state){
+        Reveal.setState( state );
+    });
+</script>
+
+
+</body>
+</html>
